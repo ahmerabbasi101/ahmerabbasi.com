@@ -25,6 +25,11 @@
 
 /* ---------- ≤860 ---------- */
 @media (max-width: 860px) {
+  .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   .nav-toggle {
     display: flex;
   }
