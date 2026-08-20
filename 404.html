@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | Ahmer Abbasi</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-2:#F6F6F3; --ink:#101010; --ink-soft:#48483F; --muted:#7A7A6E;
+    --line:#EBE9E3; --accent:#C8F42D; --accent-deep:#A9D400; --accent-soft:rgba(200,244,45,.35);
+    --display:"Space Grotesk","Segoe UI",sans-serif; --body:"Inter",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:var(--body);
+    display:grid;place-items:center;
+    overflow:hidden;
+  }
+  .wrap{padding:32px;max-width:640px;width:100%}
+  .code{
+    font-family:var(--display);font-size:15px;font-weight:600;color:var(--accent-deep);
+    background:var(--accent-soft);border-radius:999px;padding:6px 16px;
+    display:inline-block;margin-bottom:28px;
+  }
+  .title{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(40px,9vw,76px);line-height:1.02;letter-spacing:-.035em;
+    margin-bottom:20px;
+  }
+  .title mark{background:var(--accent);color:var(--ink);padding:0 .12em;border-radius:.1em}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:44px;max-width:40ch}
+  a.btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--ink);color:var(--accent);
+    font-family:var(--display);font-size:14px;font-weight:600;
+    text-decoration:none;padding:15px 28px;border-radius:999px;
+    transition:background .2s,color .2s;
+  }
+  a.btn:hover{background:var(--accent);color:var(--ink)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="code">404 · Not found</p>
+  <h1 class="title">This page <mark>doesn't exist.</mark></h1>
+  <p class="sub">It may have moved, or the link may be broken.</p>
+  <a class="btn" href="./index.html">Back to my work <span aria-hidden="true">→</span></a>
+</main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* ============================================================
+   animations.css — motion layer
+   ============================================================ */
+
+/* ---------- Reveals ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Hero title line mask ---------- */
+.hero-title .line-inner {
+  transform: translateY(112%);
+  transition: transform 0.9s var(--ease) 0.05s;
+}
+
+body.is-ready .hero-title .line-inner {
+  transform: translateY(0);
+}
+
+.hero-title .line:nth-child(2) .line-inner {
+  transition-delay: 0.16s;
+}
+
+/* ---------- Staggered hero entrance ---------- */
+body.is-loading .hero-greet,
+body.is-loading .hero-row,
+body.is-loading .hero-pills {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.hero-greet,
+.hero-row,
+.hero-pills {
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.hero-greet {
+  transition-delay: 0.05s;
+}
+
+.hero-row {
+  transition-delay: 0.3s;
+}
+
+.hero-pills {
+  transition-delay: 0.42s;
+}
+
+body.is-ready .hero-greet,
+body.is-ready .hero-row,
+body.is-ready .hero-pills {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-title .line-inner,
+  body.is-loading .hero-greet,
+  body.is-loading .hero-row,
+  body.is-loading .hero-pills {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee-track span:nth-child(2) {
+    display: none;
+  }
+
+  .faq-body {
+    transition: none;
+  }
+}
